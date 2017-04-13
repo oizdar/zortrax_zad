@@ -7,8 +7,14 @@ $("#submit").click(function (e) {
     img.onload = function () {
         let width = this.naturalWidth/2;
         let height = this.naturalHeight/2;
-        $("#toShow").css('display', 'block');
-        $("#toShow").attr({'src': url, 'alt': file.name, 'width': width, 'height': height});
+        $("#imageToShow").css('display', 'block');
+        $("#imageToShow").attr({
+            'src': url,
+            'alt': file.name,
+            'width': width,
+            'height': height
+        });
+        $("#imageHeader").text('Filename: ' + file.name);
     };
     img.src = url;
 });
