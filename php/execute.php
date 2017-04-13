@@ -11,7 +11,11 @@ if($argc > 1) {
 try {
     $sumFinder = new SumFinder($array);
     $closest = $sumFinder->findClosestSum($x);
-    print_r($closest);
+    echo "============================================ \n"
+        . "$closest[0] is closest sum to $x in given data array \n"
+        . 'It is sum of numbers: '. implode(', ', $closest[1]) . ".\n"
+        . "=========================================== \n";
+
 } catch (InvalidArgumentException $e) {
     print_r("Error Occurred: {$e->getMessage()}\n");
 }

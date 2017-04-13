@@ -77,6 +77,6 @@ class SumFinder
         if(count($this->sumArray[$sum]) > 1) {
             throw new InvalidArgumentException('Invalid array was given, more than one result is correct');
         }
-        return $this->sumArray[$sum][0];
+        return [$sum, $this->sumArray[$sum][0]];
     }
 }
